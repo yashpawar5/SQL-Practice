@@ -1,4 +1,3 @@
-
 SELECT * FROM customer;
 
 SELECT title FROM album;
@@ -14,3 +13,5 @@ SELECT * FROM album WHERE title LIKE 'Bongo Fury';
 SELECT * FROM customer WHERE city NOT LIKE 'Prague';
 
 SELECT title FROM employee WHERE state NOT IN('A', 'B');
+
+SELECT first_name FROM customer WHERE first_name LIKE 'J%' AND LENGTH(first_name) BETWEEN 3 AND 5;

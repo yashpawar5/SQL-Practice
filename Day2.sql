@@ -52,3 +52,7 @@ SELECT billing_city as city FROM invoice WHERE total > 4 FETCH FIRST 5 ROW ONLY;
 SELECT name FROM track WHERE track_id IN (1, 2, 3, 4, 5);
 
 SELECT billing_address FROM invoice WHERE total BETWEEN 1 AND 3 ORDER BY total LIMIT 5;
+
+SELECT * FROM customer WHERE email LIKE '%gmail%';
+
+SELECT * FROM customer WHERE email ~~ '%gmail%';

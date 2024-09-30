@@ -145,3 +145,20 @@ WHERE
 			);
 
 
+--Find Invoices with Total Higher than Any Customer's First Invoice
+
+SELECT
+	invoice_id,
+	total
+FROM
+	invoice
+WHERE
+	total > ANY (
+				SELECT
+					MIN(total)
+				FROM
+					invoice
+				GROUP BY customer_id
+				);
+				
+--
